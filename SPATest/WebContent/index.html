@@ -1,0 +1,56 @@
+
+<html ng-app="myNoteApp">
+
+<head>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script> -->
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="lib/angular/angular-resource.js"></script>
+<script src="lib/angular/angular-ui.js"></script>
+
+<script src="app/js/myNoteApp.js"></script>
+<script src="app/js/myNoteCtrl.js"></script>
+</head>
+
+<body>
+
+<div ng-controller="myNoteCtrl">
+
+<h2>My Note</h2>
+
+<p><textarea ng-model="message" cols="40" rows="10"></textarea></p>
+
+<p>
+<button ng-click="save()">Save</button>
+<button ng-click="clear()">Clear</button>
+</p>
+
+<p>Number of characters left: <span ng-bind="left()"></span></p>
+
+</div>
+<div ng-controller="loginCtrl">
+<form ng-submit="login()">
+<pre>
+id       : <input type="text" name="idd" ng-model="idd">
+
+password : <input type="password" name="pass" ng-model="pass">
+
+                           <button type="submit">Submit</button>
+</pre>
+
+</form>
+</div>
+
+<div ng-controller="testCtrl">
+  <form ng-submit="testing()">
+  <pre>
+      Enter :<input type="text" name="test" ng-model="t">
+      
+      
+                         <button type="submit">Submit</button>
+  </pre>
+  </form>
+</div>
+
+</body>
+</html>
